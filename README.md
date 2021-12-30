@@ -1,9 +1,12 @@
 **SRTF – CPU SCHEDULING ALGORITHM**
+
 CPU SCHEDULING ALGORITHM:
 A Process Scheduler schedules different processes to be assigned to the CPU based on particular scheduling algorithms. These algorithms are either non-preemptive or preemptive. Non-preemptive algorithms are designed so that once a process enters the running state, it cannot be preempted until it completes its allotted time, whereas the preemptive scheduling is based on priority where a scheduler may preempt a low priority running process anytime when a high priority process enters into a ready state.
 **SRTF:**
 Shortest Remaining Time First (SRTF) is the preemptive version of Shortest Job Next (SJN) algorithm, where the processor is allocated to the job closest to completion.
+
 **ALGORITHM:**
+
 1- Traverse until all process gets completely executed. 
   a) Find process with minimum remaining time at every single time lap.
   b) Reduce its time by 1.
@@ -14,7 +17,9 @@ Shortest Remaining Time First (SRTF) is the preemptive version of Shortest Job N
      wt[i]= Completion time - arrival_time-burst_time
   g)Increment time lap by one.
 2- Find turnaround time,waiting time and response time.
+
 **ADVANTAGES AND DISADVANTAGES:**
+
 Advantages: SRTF algorithm makes the processing of the jobs faster than SJN algorithm, given it’s overhead charges are not counted.
 Disadvantages: The context switch is done a lot more times in SRTF than in SJN, and consumes CPU’s valuable time for processing. This adds up to it’s processing time and diminishes it’s advantage of fast processing.
 **EXAMPLE:**
@@ -22,7 +27,7 @@ Suppose we have the following 3 processes with process ID's P1, P2, and P3 and t
 
 ![image](https://user-images.githubusercontent.com/66406542/147774434-30960083-e5ce-4eb7-8e91-29f57cd75b57.png)
  
-Gant Chart:
+**Gant Chart:**
  
  ![image](https://user-images.githubusercontent.com/66406542/147774449-8d57d5cf-1d35-4618-8c72-9b2ef6bd68a5.png)
 
@@ -45,3 +50,6 @@ Average Waiting Time = Total Waiting Time / Total No. of Processes
             = 1.67 milliseconds
             
             
+**Code Execution Output:**
+
+![image](https://user-images.githubusercontent.com/66406542/147774616-82ed520d-a4bc-41d4-8e8e-8cf03d1e1d5b.png)
